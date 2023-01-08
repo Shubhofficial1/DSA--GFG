@@ -1,0 +1,66 @@
+Problems with Fixed sized arrays :
+
+1. Space wastage:
+
+lets suppose you have a college students website which expected 800 students to join the college
+next year. So you have created one array to store these values.
+
+In the case of only 300 students registering for the courses, we are effectively wasting
+500 space.
+
+In the case of 1000 students registering , we don't have the space to store those 200 extra students.
+
+
+Advantages of Vectors :
+
+1. Dynamic Size
+2. Rich Library Functions (find,erase,insert etc)
+3. Easy to know size
+
+Array :
+
+int n = sizeof(arr)/sizeof(arr[0])
+
+Vectors : 
+int n = v.size()
+
+4. No need to pass size
+
+Arrays : 
+
+int fun(int arr[] , int n){
+
+} 
+
+Vectors : 
+
+int fun(Vector<int>  v){
+int n = v.size()
+
+}
+
+5. Can be returned from a Function
+
+Arrays :
+
+int *fun(){
+    int arr[100]        => Not valid
+    return arr
+}
+
+Fix : use dynamically allocated array instead
+
+int *fun(){
+    int *arr - new int[100]         => Valid
+    return arr
+}
+
+Vector :
+
+Vector<int> fun(){
+    Vector<int> v;          => Valid
+    return v;
+}
+
+6. By default, initialized with the default values
+7. We can copy a Vector to another Vector

@@ -1,0 +1,40 @@
+Arrays:
+
+Array is a data structure that contains multiple elements typically of same data type
+stored at contiguous memory locations.
+
+decleration :  int arr[]= {1,2,3,4,5}
+
+
+contiguous : [10, 20 ,  30 ,  40  ,  50]
+             x    x+y   x+2y  x+3y   x+4y & so on
+
+            here x => Address where first element is stored
+                 y => Size of array elements
+
+Note : in most programming languages like c/c++/Java/Python, index starts with 0. 
+
+let's suppose in above example, x= 1000 & y is 4. So the location for the 2nd element of array 
+would be 1000+4 i.e 1004.
+
+
+Advantages:
+
+1. Random Access : we can find the value of any element of the array in constant time i.e 
+O(1) time complexity.
+
+arr[0]= 10
+arr[1]= 20
+arr[3]= 40
+
+2. Cache friendliness : Cache is the closest memory to the CPU & ideally we want every item that 
+your program is using to be in the cache beacuse it's the fastest to all the other memories like ram
+, secondary disks , hard disks. So any kind of data fetching by processors at first try to prefetch 
+values from the nearby locations i.e cache memory in this case. This Cache friendliness is
+available in the case of array data structure. If you access arr[0] element , it will prefetch
+next arr element in the cache keeping in mind the cache capacity & thus helps to make next
+computations efficient.
+
+In case of Linked List / BST, this wouldn't happen since they store items at different memory 
+addresses (i.e not contiguous)
+

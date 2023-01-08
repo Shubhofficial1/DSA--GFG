@@ -1,0 +1,27 @@
+Arrays can be categorised on the basic of size as below
+
+1. Fixed Size Array
+2. Dynamic Sized Array
+
+Fixed sized arrays are those arrays in which the size of the array is defined already &
+we can't update the size in case of need.
+
+For example : 
+
+C\C++ : int arr[100] => stack allocated
+        int arr[n]   => stack allocated
+        int *arr = new int[n]  => heap allocated(Dynamically allocated memory)
+        int arr[] = {10,20,30,40,50}  =>stack allocated
+
+Java  : int [] arr = new int[100]     => heap allocated
+        int [] arr = new int[n]       => heap allocated
+        int arr[] = {10,20,30,40,50}  => heap allocated
+
+While In the case of Dynamic Sized array , internal implementation can be used to make use of 
+new space in case of need.
+
+For example :   
+C++ : Vector
+Java : Arraylist
+Python : List
+
